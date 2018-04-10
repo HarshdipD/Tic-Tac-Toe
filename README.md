@@ -6,11 +6,12 @@ I am interested in making a real complete project as I learn the programming lan
 I added the menu in the latest commit, but it doesn't seem to work after one try. I'll fix that back in some time.
 
 ## Javascript
-Just started doing it, my first ever Javascript project. I'm trying not to use ny tutorials and do all the coding myself.
+Just started doing it, my first ever Javascript project. I'm trying not to use any tutorials and do all the coding myself.
 
 ## Python
-I will start the python project once I complete the Javascript code and fic the C issue.
+I will start the Python project once I complete the Javascript code and fix the C issue.
 
-==========================================================================================================================
+=================================================================================
+
 
 Planning to add Java and React code as I make my way towards these languages.
