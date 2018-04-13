@@ -5,8 +5,9 @@
 
 void PrintGrid();
 int Check();
-  //Initializing the array. For ease of numbering, there is a 'o' (It has no use).
-  char TicTacToe[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+void ClearGrid();
+//Initializing the array. For ease of numbering, there is a 'o' (It has no use).
+char TicTacToe[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
   /***************************
   The grid will look like this:
       1  2  3
@@ -35,8 +36,10 @@ int main(){
       }
 
       case 1:{
+        ClearGrid();                                   //FIX THIS!
         do{
           PrintGrid();
+
           player = (player % 2) ? 1 : 2;
           printf("Player %d, enter a number: ", player);
           scanf("%d", &choice);
@@ -127,10 +130,11 @@ int Check(){
   else if((TicTacToe[7] == TicTacToe[8]) && (TicTacToe[8] == TicTacToe[9])){
     return 1;
   }
-  else if(TicTacToe[1] != '1' && TicTacToe[2] != '2' && TicTacToe[3] != '3' && TicTacToe[4] != '4' &&
-          TicTacToe[5] != '5' && TicTacToe[6] != '6' && TicTacToe[7] != '7' && TicTacToe[8] != '8'
-          && TicTacToe[9] != '9')
-          {
+  else if(TicTacToe[1] != '1' && TicTacToe[2] != '2' &&
+          TicTacToe[3] != '3' && TicTacToe[4] != '4' &&
+          TicTacToe[5] != '5' && TicTacToe[6] != '6' &&
+          TicTacToe[7] != '7' && TicTacToe[8] != '8' &&
+          TicTacToe[9] != '9'){
             return 0;
           }
   else{
@@ -153,4 +157,11 @@ void PrintGrid(){
   printf("     |     |     \n");
   printf("  %c  |  %c  |  %c \n", TicTacToe[7], TicTacToe[8], TicTacToe[9]);
   printf("     |     |     \n\n");
+}
+
+
+//Clears the grid back to default
+
+void ClearGrid(){
+  TicTacToe = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 }
