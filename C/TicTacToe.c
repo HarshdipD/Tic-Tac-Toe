@@ -119,6 +119,7 @@ int TicTacToeGame(){
 //CHECKS IF THE GAME IS FINISHED OR NOT
 int Check(){
   //Each if statement checks every possibility if the game is won by any user, or it's a tie, not nothing yet
+  //See if the first row is matching with same 'X' or 'O'
   if((TicTacToe[1] == TicTacToe[2]) && (TicTacToe[2] == TicTacToe[3])){
     return 1;
   }
