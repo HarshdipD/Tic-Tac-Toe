@@ -6,6 +6,8 @@
 void PrintGrid();
 int Check();
 void ClearGrid();
+int TicTacToeGame();
+
 //Initializing the array. For ease of numbering, there is a 'o' (It has no use).
 char TicTacToe[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
   /***************************
@@ -15,13 +17,9 @@ char TicTacToe[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
       7  8  9
   ***************************/
 
-int main(){
-  int player = 1;
-  int i;            //To get the return value of Check() function
-  int choice;
-  int menu_option;
-  char mark;
 
+int main(){
+  int menu_option;
   //MAIN MENU
   printf("Welcome!\n");
   printf("TicTacToe:\n");
@@ -36,8 +34,32 @@ int main(){
       }
 
       case 1:{
-        ClearGrid();                                   //FIX THIS!
-        do{
+        ClearGrid();
+        TicTacToeGame();
+        break;
+      }
+
+      default: {
+        //If entered number for menu is not a valid input
+        printf("Unrecognized input, enter a valid number\n\n");
+        break;
+      }
+    }
+  }while(menu_option != 0); //End the program after user enters "0 " in the main menu
+
+  printf("Thanks for playing!\n");  //Bye bye message
+  return 0;
+}
+
+//FUNCTIONS START HERE
+
+int TicTacToeGame(){
+  int player = 1;
+  int i;            //To get the return value of Check() function
+  int choice;
+  int menu_option;
+  char mark;
+  do{
           PrintGrid();
 
           player = (player % 2) ? 1 : 2;
@@ -80,32 +102,23 @@ int main(){
           player++;
           i = Check();
 
-        }while(i == -1);
+        }while(i == -1); //While the game has no result, it keeps taking input for the board. Here "-1" is a return from the Check() function   
 
+        //Updates the grid one last time to show the reult
         PrintGrid();
+
+        //If I was returned as 1 from Check() function: 
         if(i == 1){
           printf("Player %d (%c) won!\n", player-1, mark);
         }
         else{
-          printf("Woah, That's a tie!\n");
+          printf("Woah, That's a tie!\n");    //Otherwise, it's a tie
         }
-        break;
-      }
-
-      default: {
-        printf("Unrecognized input, enter a valid number\n\n");
-        break;
-      }
-    }
-  }while(menu_option != 0);
-
-  printf("Thanks for playing!\n");
-  return 0;
 }
-
 
 //CHECKS IF THE GAME IS FINISHED OR NOT
 int Check(){
+  //Each if statement checks every possibility if the game is won by any user, or it's a tie, not nothing yet
   if((TicTacToe[1] == TicTacToe[2]) && (TicTacToe[2] == TicTacToe[3])){
     return 1;
   }
@@ -130,6 +143,7 @@ int Check(){
   else if((TicTacToe[7] == TicTacToe[8]) && (TicTacToe[8] == TicTacToe[9])){
     return 1;
   }
+  //If the board is filled and no user has won, it's a tie
   else if(TicTacToe[1] != '1' && TicTacToe[2] != '2' &&
           TicTacToe[3] != '3' && TicTacToe[4] != '4' &&
           TicTacToe[5] != '5' && TicTacToe[6] != '6' &&
@@ -137,6 +151,7 @@ int Check(){
           TicTacToe[9] != '9'){
             return 0;
           }
+  //If no result, return -1 so the nest user can play the next turn
   else{
     return -1;
   }
@@ -144,8 +159,8 @@ int Check(){
 
 
 //Prints the TicTacToe grid
-
 void PrintGrid(){
+  //User interface
   printf("Player 1: X\tvs\tPlayer 2: O\n");
 
   printf("     |     |     \n");
@@ -160,10 +175,10 @@ void PrintGrid(){
 }
 
 
-//Clears the grid back to default
 
+//Clears the grid back to default
 void ClearGrid(){
-    for (int i = 0 ; i <= 9 ; i++){
-      TicTacToe[i] = i + '0';
-    }
+  for(int i = 0; i <= 9; i++){
+    TicTacToe[i] = i + '0';
+  }
 }
