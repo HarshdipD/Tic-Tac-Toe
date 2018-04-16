@@ -4,13 +4,13 @@ I am interested in making a real complete project as I learn the programming lan
 
 ## C
 Completed.
-I was having trouble with the menu option before but got help from a friend. 
+I was having trouble with the menu option before but got help from a friend.
+
+## Python
+Completed. This was my first python project. Planning to work n=more on this language.
 
 ## Javascript
 Just started doing it, my first ever Javascript project. I'm trying not to use any tutorials and do all the coding myself.
-
-## Python
-I will start the Python project once I complete the Javascript code.
 
 =================================================================================
 
