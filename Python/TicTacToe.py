@@ -14,35 +14,37 @@ player = 1
 def PrintGrid():
     print("Player 1: X\tvs\tPlayer 2: O\n");
     print("     |     |     ");
-    print("  " + TicTacToe[1] + "  |  "+TicTacToe[2]+"  |  " + TicTacToe[3]+"  ")
+    print("  " + TicTacToe[1] + "  |  " + TicTacToe[2] + "  |  " + TicTacToe[3] + "  ")
     print("_____|_____|_____");
     print("     |     |     ");
-    print("  " + TicTacToe[4] + "  |  "+TicTacToe[5]+"  |  " + TicTacToe[6]+"  ")
+    print("  " + TicTacToe[4] + "  |  " + TicTacToe[5]+"  |  " + TicTacToe[6] + "  ")
     print("_____|_____|_____");
     print("     |     |     ");
-    print("  " + TicTacToe[7] + "  |  "+TicTacToe[8]+"  |  " + TicTacToe[9]+"  ")
+    print("  " + TicTacToe[7] + "  |  " + TicTacToe[8]+"  |  " + TicTacToe[9] + "  ")
     print("     |     |     ");
 
 
 ##Main Function starts
-player = player%2 #Player number changes after each turn
+player = player % 2 #Player number changes after each turn
 i = -1
 while i == -1:
     PrintGrid()
-    if player%2:
+    if player % 2:
         player = 1
     else:
         player = 2
     #Takes input from the user to fill in the grid
     print("player ", end="")
     print(player, end="")
-    #Ask for the number to input in the grid
     choice = input(", enter a number: ")
+    
     mark = player
     if player == 1:
         mark = 'X'
     else:
         mark = 'O'
+
+    #Checks if the grid element is already filled or not. If not, fills it as user desired.
     if(choice == 1 and TicTacToe[1] == '1'):
         TicTacToe[1] = [mark]
 
