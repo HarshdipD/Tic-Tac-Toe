@@ -36,6 +36,7 @@ while i == -1:
     #Takes input from the user to fill in the grid
     print("player ", end="")
     print(player, end="")
+    #Ask for the number to input in the grid
     choice = input(", enter a number: ")
     mark = player
     if player == 1:
@@ -43,31 +44,35 @@ while i == -1:
     else:
         mark = 'O'
     if(choice == 1 and TicTacToe[1] == '1'):
-        TicTacToe[1] = ['mark']
+        TicTacToe[1] = [mark]
 
     elif(choice == 2 and TicTacToe[2] == '2'):
-        TicTacToe[2] = ['mark']
+        TicTacToe[2] = [mark]
 
     elif(choice == 3 and TicTacToe[3] == '3'):
-        TicTacToe[3] = ['mark']
+        TicTacToe[3] = [mark]
 
     elif(choice == 4 and TicTacToe[4] == '4'):
-        TicTacToe[4] = ['mark']
+        TicTacToe[4] = [mark]
 
     elif(choice == 5 and TicTacToe[5] == '5'):
-        TicTacToe[5] = ['mark']
+        TicTacToe[5] = [mark]
 
     elif(choice == 6 and TicTacToe[6] == '6'):
-        TicTacToe[6] = ['mark']
+        TicTacToe[6] = [mark]
 
     elif(choice == 7 and TicTacToe[7] == '7'):
-        TicTacToe[7] = ['mark']
+        TicTacToe[7] = [mark]
 
     elif(choice == 8 and TicTacToe[8] == '8'):
-        TicTacToe[8] = ['mark']
+        TicTacToe[8] = [mark]
 
     elif(choice == 9 and TicTacToe[9] == '9'):
-        TicTacToe[9] = ['mark']
+        TicTacToe[9] = [mark]
+    else:
+        print("Invalid move!")
+        player = player - 1
 
+    #increase the number of player for next turn
     player = player + 1
     print(TicTacToe)
