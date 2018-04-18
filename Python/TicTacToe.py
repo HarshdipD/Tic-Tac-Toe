@@ -27,7 +27,7 @@ def Check():
     #If first row is full with same characters, the game is over and the player with that character has won
     if((TicTacToe[1] == TicTacToe[2]) and (TicTacToe[2] == TicTacToe[3])):
         return 1
-
+    #If first column is full with same characters, the game is over and the player with that character has won
     elif((TicTacToe[1] == TicTacToe[4]) and (TicTacToe[4] == TicTacToe[7])):
         return 1
 
