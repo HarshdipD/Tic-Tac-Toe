@@ -3,9 +3,9 @@ print("Welcome...")
 
 #Assigning values to the grid
 #The grid will look like this:
-#  1  2  3
-#  4  5  6
-#  7  8  9
+#  1 | 2 | 3
+#  4 | 5 | 6
+#  7 | 8 | 9
 TicTacToe = ['o', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 #Designation a number to player:
 player = 1
