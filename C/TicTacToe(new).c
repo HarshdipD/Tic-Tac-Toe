@@ -1,5 +1,3 @@
-//Done a little different from they the assignment. Still works, even better maybe :')
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
