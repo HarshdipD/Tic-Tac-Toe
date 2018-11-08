@@ -9,6 +9,7 @@ I was having trouble with the menu option before but got help from a friend.
 ## Python
 Completed. This was my first python project. Planning to work more on this language.
 
+#### 11 November, 2018
 ## React
 Following the tutorial provided by React docs!
 #### 11 November, 2018
