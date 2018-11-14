@@ -10,7 +10,7 @@ I was having trouble with the menu option before but got help from a friend.
 Completed. This was my first python project. Planning to work more on this language someday!
 
 ## Java
-In progress! I am making taking an object oriented approach here, and I plan to learn AI and implement it in this game!
+In progress! I am taking an object oriented approach here, and I plan to learn AI and implement it in this game!
 
 ## React
 Following the tutorial provided by React docs!
