@@ -1,5 +1,3 @@
-package tictactoenew;
-
 class block implements global{
     private static int state;
     
