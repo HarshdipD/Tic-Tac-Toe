@@ -10,7 +10,7 @@ class block implements global{
     {
         if(isValidState(new_state))
         {
-            new_state = state;
+            state = new_state;
         }
         
         return true;
