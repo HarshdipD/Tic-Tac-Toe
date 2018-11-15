@@ -1,6 +1,6 @@
 public class game implements global {
     
-    board gameBoard;
+    board gameBoard = new board();
     //player playerX;
     //player playerY;
     int turn;
