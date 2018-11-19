@@ -1,17 +1,56 @@
-public class game implements global {
+import java.util.Scanner;
+
+public class game implements global
+{
     
     board gameBoard = new board();
     //player playerX;
-    //player playerY;
+    //player playerO;
     int turn;
     
     public game()
     {
-        gameBoard.DisplayBoard();
+        System.out.println("TIC TAC TOE");
+        board.DisplayBoard();
     }
     
     public void start()
-    {  
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Game with 1. Computer or 2. Human player?");
+        int p;
+        
+        do
+        {
+            p = sc.nextInt();
+                    
+            switch(p)
+            {
+                case 1:
+                {
+                    playWithHuman();
+                    break;
+                }
+                
+                case 2:
+                {
+                    playWithAI();
+                    break;
+                }
+                
+                case 0:
+                {
+                    System.out.println("Exiting...");
+                    break;
+                }
+                
+                default:{
+                    System.out.println("Invalid input. To exit, press 0.");
+                    break;
+                }
+            }
+        }while(p != 0);
+        
     /*
     turn X;
     
@@ -30,4 +69,13 @@ public class game implements global {
     */
     }
     
+    public static void playWithHuman()
+    {
+        
+    }
+    
+    public static void playWithAI()
+    {
+        
+    }
 }
