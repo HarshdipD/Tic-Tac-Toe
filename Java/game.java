@@ -4,7 +4,7 @@ public class game implements global
 {
     
     board gameBoard = new board();
-    //player playerX;
+    player playerX;
     //player playerO;
     int turn;
     
@@ -69,9 +69,12 @@ public class game implements global
     */
     }
     
-    public static void playWithHuman()
+    public void playWithHuman()
     {
+        //HumanPlayer playerX;
+        //HumanPlayer playerO;
         
+        playerX.play(gameBoard);
     }
     
     public static void playWithAI()
