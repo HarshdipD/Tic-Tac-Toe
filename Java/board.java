@@ -1,13 +1,13 @@
-public class board implements global {
-    public static block blocks[][];
+public class board implements global
+{
+    private static block blocks[][] = new block[3][3];
     private int state = EMPTY;
     
     /**
-     * 
+     * Constructor, putting default state of board (EMPTY)
      */
     public board()
     {
-        blocks = new block[3][3];
         for(int i = 0; i < 3; i++)
         {
             for(int j = 0; j < 3; j++)
@@ -17,10 +17,16 @@ public class board implements global {
         }
     }
     
+    public static void makeMove()
+    {
+        
+    }
+    
+    /**
+     * Displays the board to console
+     */
     public static void DisplayBoard()
     {
-        System.out.println("Player 1: X\tvs\tPlayer 2: O\n");
-
         System.out.println("     |     |     ");
         System.out.println("  " + blocks[0][0] + "  |  " + blocks[0][1] + "  |  " + blocks[0][2] + "  ");
         System.out.println("_____|_____|_____");
@@ -37,9 +43,32 @@ public class board implements global {
         int new_state;
         new_state = checkRow(0) + checkRow(1) + checkRow(2) + checkCol(0) + checkCol(1) + checkCol(2);
         
-        if (new_state == EMPTY) state = new_state;
-        return state;
+        //If the addition is 0, the board is empty
+        if (new_state == EMPTY)
+            state = new_state;
         
+        //If the addition is 1, the game is won by X
+        else if(new_state + checkDiagonals() == X)
+            state = new_state;
+        
+        //If the addition is 2, the game is won by O
+        else if(new_state + checkDiagonals() == O)
+            state = new_state;
+        
+        return state;
+    }
+    
+    public int checkBoard()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                if(blocks[i][j].getState() != EMPTY)
+                    return 3;
+            }
+        }
+        return 0;
     }
    
     
@@ -65,6 +94,10 @@ public class board implements global {
         return EMPTY;
     }
     
+    /**
+     * 
+     * @return 
+     */
     private int checkDiagonals()
     {
         if(blocks[0][0].getState() != EMPTY)
