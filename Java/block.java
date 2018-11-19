@@ -1,11 +1,19 @@
 class block implements global{
-    private static int state;
+    public static int state;
     
+    /**
+     * Constructor, by default the state of block is empty
+     */
     public block()
     {
         state = EMPTY;
     }
     
+    /**
+     * Sets the state of the block
+     * @param new_state 
+     * @return true
+     */
     public static boolean setState(int new_state)
     {
         if(isValidState(new_state))
@@ -16,21 +24,39 @@ class block implements global{
         return true;
     }
     
+    /**
+     * Helper boolean function
+     * @param new_state
+     * @return if the state is X or O then true
+     */
     public static boolean isValidState(int new_state)
     {
         return (state == X || state == O);
     }
     
+    /**
+     * Getter
+     * @return state
+     */
     public int getState()
     {
         return state;
     }
     
+    /**
+     * toString method
+     * @return
+     */
     @Override
     public String toString()
     {
-        if(state == EMPTY) return " "; 
-        else if(state == 1) return "x"; 
-        else return "o"; 
+        switch (state) {
+            case EMPTY:
+                return " "; 
+            case 1:
+                return "X";
+            default:
+                return "O";
+        }
     }
 }
