@@ -1,5 +1,3 @@
-package tictactoenew;
-
 import java.util.Scanner;
 
 public class HumanPlayer extends player
