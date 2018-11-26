@@ -6,7 +6,7 @@ I am interested in making a real complete project as I learn the programming lan
 Completed.
 I was having trouble with the menu option before but got help from a friend.
 
-## Python
+## Python 3
 Completed. This was my first python project. Planning to work more on this language someday!
 
 ## Java
