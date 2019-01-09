@@ -3,19 +3,19 @@ Designing algorithms for a Tic-Tac-Toe game in C, Java, Python, and more.
 I am interested in making a real complete project as I learn the programming languages.
 
 ## C
-Completed.
-I was having trouble with the menu option before but got help from a friend.
+Completed - February 2018.
 
 ## Python 3
-Completed. This was my first python project. Planning to work more on this language someday!
+Completed - April 2018. This was my first python project. Planning to work more on this language someday!
 
 ## Java
-In progress! I am taking an object oriented approach here, and I plan to learn AI and implement it in this game!
+Completed - October - 2018. 
+ - Planning to implement AI soon.
 
 ## React
-Following the tutorial provided by React docs!
+To start; I will be following the tutorial by React docs to make the game
 
 ## Javascript
-Just started doing it, my first ever Javascript project. I'm trying not to use any tutorials and do all the coding myself.
+Plannig to end by April 2019
 
 =================================================================================
